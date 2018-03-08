@@ -1,0 +1,24 @@
+launch_btc_block_height: 525123  # Approx June 3rd 2018 9am EST, 6am PST, 3pm UTC.
+
+opening_balances_snapshot_hash: abcdef123123123
+
+system_contract_hash: 123123abcdef
+
+# `eosio_account_name` is your desired account name on the new network.
+# `eosio_public_key` is the key your producer will be registered with at first.
+# `keybase_user` (or `pgp_public_key`) points to some public key (as text) or a keybase.io account name.
+# `agent_name` is the name you're going to use in your `config.ini`'s `agent-name` field.
+# `url` should be your main communications entrypoint.
+
+producers:
+
+- eosio_account_name: acctname
+  eosio_public_key: EOSexample
+  keybase_user: example
+  agent_name: Example EOS.IO BP
+  url: https://example.com
+
+# Insert your candidate here. The order is not important, as it will
+# be shuffled by `eos-bios`. Don't touch other people's proposal, only
+# yours.. so don't move things around either, it makes things less
+# clear for review.
