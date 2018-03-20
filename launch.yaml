@@ -22,3 +22,9 @@ producers:
 # be shuffled by `eos-bios`. Don't touch other people's proposal, only
 # yours.. so don't move things around either, it makes things less
 # clear for review.
+
+- eosio_account_name: eosioca
+  eosio_public_key: EOS5LtSmcQ4Aiso1ZPwySCjfzxSdizf9K2Nr4WripcFYCSUQEz6BX
+  keybase_user: abourget
+  agent_name: eosio.ca
+  url: https://eosio.ca
