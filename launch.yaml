@@ -28,3 +28,10 @@ producers:
   keybase_user: abourget
   agent_name: eosio.ca
   url: https://eosio.ca
+
+
+- eosio_account_name: roelandp
+  eosio_public_key: EOS4yVoWaYF3eqGw7y12KZUAsNXqiYkdNG7Exc1GhC9ZTW9ssC2cg
+  keybase_user: roelandp
+  agent_name: roelandp
+  url: https://roelandp.nl/eos
