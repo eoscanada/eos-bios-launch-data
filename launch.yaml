@@ -1,37 +1,90 @@
 launch_btc_block_height: 525123  # Approx June 3rd 2018 9am EST, 6am PST, 3pm UTC.
 
-opening_balances_snapshot_hash: abcdef123123123
+opening_balances_snapshot_hash: ec2fe55229c3ef2232b5b7fa57175243bf5cf16cb7bbe4a6f8750274f7a56f9a
 
-system_contract_hash: 123123abcdef
-
-# `eosio_account_name` is your desired account name on the new network.
-# `eosio_public_key` is the key your producer will be registered with at first.
-# `keybase_user` (or `pgp_public_key`) points to some public key (as text) or a keybase.io account name.
-# `agent_name` is the name you're going to use in your `config.ini`'s `agent-name` field.
-# `url` should be your main communications entrypoint.
+contract_hashes:
+  bios: de6b010347d6ed6f56a5caf406332fbe61a1a485990c5a43484323269ba6b5dd
+  system: 21ebeb718e516e727cae6851cb87b0dd040e3cdc1a57dca8d90f88cd8fc1d315
+  msig: 8608b380ab76eaa8f8dbe9ebedb4e09f3d4c496d366711d3f09d8865fc0efcb4
+  token: c470675ba4809eb1899739394c7913f2582582860ff137854eada1151d1e180c
 
 producers:
+- account_name: eosarctic
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+        weight: 1
+  initial_block_signing_key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+  keybase_user: abourget
+  organization_name: EOS Arctic Example
+  urls:
+  - https://bp1.eosarctic.example.com
 
-- eosio_account_name: acctname
-  eosio_public_key: EOSexample
-  keybase_user: example
-  agent_name: Example EOS.IO BP
-  url: https://example.com
-
+#
 # Insert your candidate here. The order is not important, as it will
 # be shuffled by `eos-bios`. Don't touch other people's proposal, only
-# yours.. so don't move things around either, it makes things less
-# clear for review.
+# yours..
+#
 
-- eosio_account_name: eosioca
-  eosio_public_key: EOS5LtSmcQ4Aiso1ZPwySCjfzxSdizf9K2Nr4WripcFYCSUQEz6BX
+- account_name: eoscanada
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
+        weight: 1
+  initial_block_signing_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
   keybase_user: abourget
-  agent_name: eosio.ca
-  url: https://eosio.ca
+  organization_name: EOS Canada
+  urls:
+  - https://eoscanada.com
+  - https://t.me/EOSCanada
+  - https://github.com/eoscanada
 
-- eosio_account_name: eos.detroit
-  eosio_public_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
+- account_name: eos.detroit
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
+        weight: 1
+  initial_block_signing_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
   keybase_user: robrigo
-  agent_name: EOS Detroit
-  url: https://eosdetroit.com
+  organization_name: EOS Detroit
+  urls:
+  - https://eosdetroit.com
 
+- account_name: roelandp
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS4yVoWaYF3eqGw7y12KZUAsNXqiYkdNG7Exc1GhC9ZTW9ssC2cg
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS4yVoWaYF3eqGw7y12KZUAsNXqiYkdNG7Exc1GhC9ZTW9ssC2cg
+        weight: 1
+  initial_block_signing_key: EOS4yVoWaYF3eqGw7y12KZUAsNXqiYkdNG7Exc1GhC9ZTW9ssC2cg
+  keybase_user: roelandp
+  organization_name: roelandp
+  urls:
+  - https://roelandp.nl/eos
