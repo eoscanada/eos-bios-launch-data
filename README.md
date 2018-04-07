@@ -2,7 +2,7 @@ EOS BIOS Producer data
 ======================
 
 This is the data repository for candidate Block Producers willing to
-use [`eos-bios`](https://github.com/eosioca/eos-bios) to bootstrap an
+use [`eos-bios`](https://github.com/eoscanada/eos-bios) to bootstrap an
 `EOS.IO Software` blockchain.
 
 Propose your candidacy by submitting a PR to this repository, adding
