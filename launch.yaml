@@ -28,3 +28,10 @@ producers:
   keybase_user: abourget
   agent_name: eosio.ca
   url: https://eosio.ca
+
+- eosio_account_name: eos.detroit
+  eosio_public_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
+  keybase_user: robrigo
+  agent_name: EOS Detroit
+  url: https://eosdetroit.com
+
