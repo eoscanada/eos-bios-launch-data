@@ -58,7 +58,7 @@ producers:
 Installing `eos-bios`
 ---------------------
 
-Head to https://github.com/eoscanada/eos-bios to get binary releases
+Head to https://github.com/eoscanada/eos-bios/releases to get binary releases
 of the software, for Windows, Mac and Linux.
 
 
@@ -75,3 +75,22 @@ and watch the network boot.
 You can run this binary from any location (a server, your laptop,
 whatever), provided the hooks can manipulate your infrastructure
 (through some config management, ssh, orchestrators, etc..)
+
+
+
+
+
+
+
+-----------
+
+TODO:
+
+* Support having less than 21, and make each of them repeat their username.
+
+* Do the release
+
+* Onboard people to `launch.yaml`
+
+* Do the verification..
+  * Make the process into a .yaml file, all plugin-based, sort of...
