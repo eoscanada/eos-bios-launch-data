@@ -3,13 +3,104 @@ launch_btc_block_height: 525123  # Approx June 3rd 2018 9am EST, 6am PST, 3pm UT
 opening_balances_snapshot_hash: ec2fe55229c3ef2232b5b7fa57175243bf5cf16cb7bbe4a6f8750274f7a56f9a
 
 contract_hashes:
-  bios: de6b010347d6ed6f56a5caf406332fbe61a1a485990c5a43484323269ba6b5dd
-  system: 21ebeb718e516e727cae6851cb87b0dd040e3cdc1a57dca8d90f88cd8fc1d315
-  msig: 8608b380ab76eaa8f8dbe9ebedb4e09f3d4c496d366711d3f09d8865fc0efcb4
-  token: c470675ba4809eb1899739394c7913f2582582860ff137854eada1151d1e180c
+  eosio.bios: de6b010347d6ed6f56a5caf406332fbe61a1a485990c5a43484323269ba6b5dd
+  eosio.system: 21ebeb718e516e727cae6851cb87b0dd040e3cdc1a57dca8d90f88cd8fc1d315
+  eosio.msig: 8608b380ab76eaa8f8dbe9ebedb4e09f3d4c496d366711d3f09d8865fc0efcb4
+  eosio.token: c470675ba4809eb1899739394c7913f2582582860ff137854eada1151d1e180c
+
+
+# The bootseq is the list of operations a BIOS Boot Node will execute on the blockchain
+# on launch.  It is also what the Appointed Block Producers will verify against the
+# sync'd chain.
+
+boot_sequence:
+- op: system.setcode
+  label: Setting eosio.bios code for account eosio
+  data:
+    account: eosio
+    contract_name_ref: eosio.bios  # References the `contract_hashes` up here, and the `contracts` section of the `local_config.yaml`
+
+- op: system.newaccount
+  label: Create account eosio.msig
+  data:
+    creator: eosio
+    new_account: eosio.msig
+    pubkey: ephemeral
+
+- op: system.newaccount
+  label: Create account eosio.token
+  data:
+    creator: eosio
+    new_account: eosio.token
+    pubkey: ephemeral
+
+- op: system.setpriv
+  label: Setting privileged account for eosio and eosio.msig
+  data:
+    account: eosio
+
+- op: system.setpriv
+  label: Setting privileged account for eosio.msig
+  data:
+    account: eosio.msig
+
+- op: system.setcode
+  label: Setting eosio.msig code for account eosio.msig
+  data:
+    account: eosio.msig
+    contract_name_ref: eosio.msig
+
+- op: system.setcode
+  label: Setting eosio.token code for account eosio.token
+  data:
+    account: eosio.token
+    contract_name_ref: eosio.token
+
+- op: token.create
+  label: Creating the EOS currency symbol
+  data:
+    account: eosio
+    amount: 1000000000.0000 EOS
+    can_whitelist: false
+    can_freeze: false
+    can_recall: false
+
+- op: token.issue
+  label: Issuing initial EOS monetary base
+  data:
+    account: eosio
+    amount: 1000000000.0000 EOS
+    memo: "Initial issuance"
+
+- op: producers.create_accounts
+  label: Creating initial Block Producers accounts
+
+- op: snapshot.inject
+  label: Injecting ERC-20 snapshot balances
+
+- op: system.setprods
+  label: Setting the initial Appointed Block Producer schedule
+
+- op: system.setcode
+  label: Replacing eosio account from eosio.bios contract to eosio.system
+  data:
+    account: eosio
+    contract_name_ref: eosio.system
+
+- op: system.destroy_accounts
+  label: Disabling authorization for system accounts
+  data:
+    accounts:
+    - eosio
+    - eosio.msig
+    - eosio.token
+
+#########################
+### List of producers ###
+#########################
 
 producers:
-- account_name: eosarctic
+- account_name: eos.freezing
   authority:
     owner:
       threshold: 1
@@ -22,10 +113,12 @@ producers:
       - public_key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
         weight: 1
   initial_block_signing_key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
-  keybase_user: abourget
-  organization_name: EOS Arctic Example
+  keybase_user: frozenjack
+  organization_name: EOS Antarctica
+  timezone: Antarctica/South_Pole
   urls:
-  - https://bp1.eosarctic.example.com
+  - https://its.freezing.example.com
+  - https://twitter/frozenjack
 
 #
 # Insert your candidate here. The order is not important, as it will
@@ -46,6 +139,7 @@ producers:
       - public_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
         weight: 1
   initial_block_signing_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
+  timezone: America/Montreal
   keybase_user: abourget
   organization_name: EOS Canada
   urls:
@@ -68,6 +162,7 @@ producers:
   initial_block_signing_key: EOS7yKbJ5VmWY7wWEuz7kKhA9jV6gwXAjBmQmKmcewptArenteSBg
   keybase_user: robrigo
   organization_name: EOS Detroit
+  timezone: America/Detroit
   urls:
   - https://eosdetroit.com
 
@@ -86,5 +181,6 @@ producers:
   initial_block_signing_key: EOS4yVoWaYF3eqGw7y12KZUAsNXqiYkdNG7Exc1GhC9ZTW9ssC2cg
   keybase_user: roelandp
   organization_name: roelandp
+  timezone: Europe/Amsterdam
   urls:
   - https://roelandp.nl/eos
