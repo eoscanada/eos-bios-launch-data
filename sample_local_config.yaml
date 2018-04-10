@@ -72,6 +72,7 @@ hooks:
 # NOTE: take these out for production !
 
 debug:
-  no_shuffle: true
-  enrich_producers: true
-  keep_system_account: true
+  no_shuffle: true              # Prevents shuffling, so the order in the `launch.yaml` is the order of the launch: 1st is BIOS boot, 21 next are ABPs, etc..
+  enrich_producers: true        # This provides all producers with 100000.0000 EOS, so they can play with it.
+  keep_system_account: true     # Don't destory the system accounts at the end, so you can continue fiddling with the boot process
+  truncate_snapshot: 5000       # Don't inject *all* the rows of the snapshot, just a few. Omit this value for all (or set to 0)

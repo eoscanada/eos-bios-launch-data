@@ -86,11 +86,7 @@ whatever), provided the hooks can manipulate your infrastructure
 
 TODO:
 
-* Support having less than 21, and make each of them repeat their username.
-
-* Do the release
-
-* Onboard people to `launch.yaml`
-
 * Do the verification..
   * Make the process into a .yaml file, all plugin-based, sort of...
+
+* Onboard people to `launch.yaml`
