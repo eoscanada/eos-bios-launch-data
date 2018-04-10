@@ -1,17 +1,21 @@
-EOS BIOS Producer data
-======================
+EOS BIOS Launch Data
+====================
 
-This is the data repository for candidate Block Producers willing to
-use [`eos-bios`](https://github.com/eoscanada/eos-bios) to bootstrap an
-`EOS.IO Software` blockchain.
+This is a proposed repository that holds information about the boot sequence and the Candidate Block Producers willing to participate in a (potential mainnet) network launch.
 
-Propose your candidacy by submitting a PR to this repository, adding
-your information to `launch.yaml`.
+This repository relies on the
+[`eos-bios`](https://github.com/eoscanada/eos-bios) software to
+execute the launch of an `EOS.IO Software`-based blockchain.
+
+Propose your candidacy by submitting a PR against `launch.yaml`, and
+roll out your own `hooks` (see samples in `hooks/`) that match your
+infrastructure.
 
 Be ready to run `eos-bios` when the time comes.
 
-You'll need practice, so we'll be on the _EOS.IO Community Testnet_
-channel on Telegram, rehearsing many times before launch.
+We'll all want to practice a lot, so join us on the
+[_EOSIO BIOS Boot_](https://t.me/joinchat/GSUv1UaI5QIuifHZs8k_eA)
+channel on Telegram.
 
 
 Data about the candidate producers
@@ -51,3 +55,23 @@ producers:
 * `urls` is a list of web properties owned by the organization. Those properties will be watched during the boot sequence, as a BIOS boot node would need to publish the _kickstart data_ to some (or all) of these properties.
 
 
+Installing `eos-bios`
+---------------------
+
+Head to https://github.com/eoscanada/eos-bios to get binary releases
+of the software, for Windows, Mac and Linux.
+
+
+The process
+-----------
+
+Once you have crafted your configuration (by copying all the
+`sample_*` files and customizing them), you can run:
+
+    eos-bios --launch-data launch.yaml --local-config config.yaml
+
+and watch the network boot.
+
+You can run this binary from any location (a server, your laptop,
+whatever), provided the hooks can manipulate your infrastructure
+(through some config management, ssh, orchestrators, etc..)
