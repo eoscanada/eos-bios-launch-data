@@ -1,6 +1,7 @@
 launch_btc_block_height: 525123  # Approx June 3rd 2018 9am EST, 6am PST, 3pm UTC.
 
-opening_balances_snapshot_hash: ec2fe55229c3ef2232b5b7fa57175243bf5cf16cb7bbe4a6f8750274f7a56f9a
+# Corresponds to https://github.com/eosdac/airdrop/blob/master/snapshots/snapshot_290.csv
+opening_balances_snapshot_hash: af36de814f2b63484cbc565effc03c3b9277882d01ff5c0c85f924cf4b53a9d5
 
 contract_hashes:
   eosio.bios: de6b010347d6ed6f56a5caf406332fbe61a1a485990c5a43484323269ba6b5dd

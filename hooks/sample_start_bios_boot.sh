@@ -20,7 +20,6 @@ echo $1 > ~/.eos/genesis.json
 
 echo "plugin = eosio::producer_plugin" >> ~/.eos/config.ini
 echo "producer-name = eosio" >> ~/.eos/config.ini
-
 echo "enable-stale-production = true" >> ~/.eos/config.ini
 echo "private-key = [\"$2\",\"$3\"]" >> ~/.eos/config.ini
 
