@@ -12,7 +12,7 @@ echo "Phasing out any previous blockchain from disk"
 rm -rf ~/.eos/blocks ~/.eos/shared_mem
 
 echo "Copying base config"
-# This one shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
+# Your base_config.ini shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
 cp base_config.ini ~/.eos/config.ini
 
 echo "Writing genesis.json"

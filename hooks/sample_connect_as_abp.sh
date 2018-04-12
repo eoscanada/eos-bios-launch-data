@@ -18,7 +18,7 @@ echo "Writing genesis.json"
 echo $4 > ~/.eos/genesis.json
 
 echo "Copying base config"
-# This one shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
+# Your base_config.ini shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
 cp base_config.ini ~/.eos/config.ini
 echo "plugin = eosio::producer_plugin" >> ~/.eos/config.ini
 echo "$5" >> ~/.eos/config.ini

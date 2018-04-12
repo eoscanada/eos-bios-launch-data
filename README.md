@@ -76,6 +76,11 @@ You can run this binary from any location (a server, your laptop,
 whatever), provided the hooks can manipulate your infrastructure
 (through some config management, ssh, orchestrators, etc..)
 
+Troubleshooting:
+
+* Verify that the `config.ini` and `genesis.json` that your scripts produced are as intended.
+  * Check the notes in the different sample hooks.
+  * Make sure your `base_config.ini` doesn't have extraneous key/values.
 
 
 
