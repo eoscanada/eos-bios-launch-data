@@ -89,4 +89,8 @@ TODO:
 * Do the verification..
   * Make the process into a .yaml file, all plugin-based, sort of...
 
+* Make it so a basic mesh is established from the 21 ABPs
+
+  * Call /v1/net/connect is available, go and write some more `p2p-peer-address` lines in the configs
+
 * Onboard people to `launch.yaml`

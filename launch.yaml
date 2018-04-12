@@ -148,6 +148,27 @@ producers:
   - https://t.me/EOSCanada
   - https://github.com/eoscanada
 
+- account_name: eosdublin
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS594XCjRRqtCKDT5FsYScB5wHkzmhUCALZc2pYp2zYpJQ2dTTYX
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS594XCjRRqtCKDT5FsYScB5wHkzmhUCALZc2pYp2zYpJQ2dTTYX
+        weight: 1
+  initial_block_signing_key: EOS594XCjRRqtCKDT5FsYScB5wHkzmhUCALZc2pYp2zYpJQ2dTTYX
+  keybase_user: eosdublin
+  organization_name: eosdublin
+  timezone: Europe/Dublin
+  urls:
+  - https://eosdublin.com
+  - https://github.com/eosdublin
+  - https://t.me/eosdb
+
 - account_name: eos.detroit
   authority:
     owner:
