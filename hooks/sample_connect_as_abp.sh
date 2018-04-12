@@ -21,6 +21,7 @@ echo "Copying base config"
 # Your base_config.ini shouldn't contain any `producer-name` nor `private-key` nor `enable-stale-production` statements.
 cp base_config.ini ~/.eos/config.ini
 echo "plugin = eosio::producer_plugin" >> ~/.eos/config.ini
+echo "p2p-peer-address = $1" >> ~/.eos/config.ini
 echo "$5" >> ~/.eos/config.ini
 echo "private-key = [\"$2\",\"$3\"]" >> ~/.eos/config.ini
 
