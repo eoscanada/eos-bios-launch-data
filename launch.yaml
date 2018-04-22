@@ -148,6 +148,27 @@ producers:
   - https://t.me/EOSCanada
   - https://github.com/eoscanada
 
+- account_name: eos.nation
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS78uKLgYYSgQHXyJbbjDzXpibChtcYGKmooz8AmyiDhTiaC1Syz
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS78uKLgYYSgQHXyJbbjDzXpibChtcYGKmooz8AmyiDhTiaC1Syz
+        weight: 1
+  initial_block_signing_key: EOS78uKLgYYSgQHXyJbbjDzXpibChtcYGKmooz8AmyiDhTiaC1Syz
+  timezone: America/Toronto
+  keybase_user: deniscarriere
+  organization_name: EOS Nation
+  urls:
+  - https://eosnation.io
+  - https://t.me/EOSNation
+  - https://github.com/eos-nation
+
 - account_name: eosdublin
   authority:
     owner:
