@@ -206,3 +206,22 @@ producers:
   timezone: Europe/Amsterdam
   urls:
   - https://roelandp.nl/eos
+
+- account_name: eosflare
+  authority:
+    owner:
+      threshold: 1
+      keys:
+      - public_key: EOS6QYkoJZwmEhE7Ep5wP43ZxygtVqKLyPqEzNUjHuNYwYTCuvDdK
+        weight: 1
+    active:
+      threshold: 1
+      keys:
+      - public_key: EOS6QYkoJZwmEhE7Ep5wP43ZxygtVqKLyPqEzNUjHuNYwYTCuvDdK
+        weight: 1
+  initial_block_signing_key: EOS6QYkoJZwmEhE7Ep5wP43ZxygtVqKLyPqEzNUjHuNYwYTCuvDdK
+  keybase_user: eosflare
+  organization_name: eosflare.io
+  timezone: America/Chicago
+  urls:
+  - https://eosflare.io/
