@@ -2,27 +2,23 @@ producer:
   my_account: eos.freezing
   api_address: http://localhost:8888
   secret_p2p_address: localhost:9876
-  wallet_address: http://localhost:6666
-  block_signing_public_key: EOS8NijGLHT8WyDmt2nqMwfP1hr8EiYx5JCYBWSP9S26WgbeugvSJ
   block_signing_private_key_path: ./privkey-eugvSJ.key
 
 network:
-  seed_discovery_url: https://github.com/
+  seed_discovery_url: https://abourget.keybase.pub/testnet-cbillett.yaml
   cache_path: /tmp/disco
 
 hooks:
   init:
-    exec: ./hooks/init.sh
-  start_bios_boot:
-    exec: ./hooks/start_bios_boot.sh
-  connect_as_abp:
-    exec: ./hooks/connect_as_abp.sh
-  connect_as_participant:
-    exec: ./hooks/connect_as_participant.sh
+    exec: ./hook_init.sh
+  boot_network:
+    exec: ./hook_boot_network.sh
+  join_network:
+    exec: ./hook_join_network.sh
   publish_kickstart_data:
-    exec: ./hooks/publish_kickstart_data.sh
+    exec: ./hook_publish_kickstart_data.sh
   done:
-    exec: ./hooks/done.sh
+    exec: ./hook_done.sh
 
 my_parameters:
   base_per_transaction_net_usage: 100

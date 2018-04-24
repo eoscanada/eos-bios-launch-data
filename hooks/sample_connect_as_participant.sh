@@ -22,7 +22,6 @@ echo $4 > ~/.eos/genesis.json
 
 # INSERT YOUR NODE NAME HERE:
 echo "producer-name = $5" >> ~/.eos/config.ini
-echo "plugin = eosio::producer_plugin" >> ~/.eos/config.ini
 echo "p2p-peer-address = $1" >> ~/.eos/config.ini
 echo "private-key = [\"$2\",\"$3\"]" >> ~/.eos/config.ini
 echo "resync-blockchain = true" >> ~/.eos/config.ini
