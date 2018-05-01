@@ -1,11 +1,10 @@
 EOS BIOS Launch Data
 ====================
 
-THIS REPOSITORY IS OBSOLETE.
+THIS NOW ONLY HOLDS FILES THAT ARE PUBLISHED ON IPFS, AND ARE PROVIDED FOR REFERENCE ONLY.
 
-PLEASE REFER TO THOSE TWO REPOSITORIES FOR MORE INFO:
+PLEASE REFER TO THIS REPOSITORY FOR MORE INFO:
 
-https://github.com/eoscanada/network-discovery
 https://github.com/eoscanada/eos-bios
 
 Join us on the
